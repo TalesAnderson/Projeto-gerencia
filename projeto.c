@@ -96,7 +96,7 @@ void imprime (Fila *fila){
 	else{
 		Nodo *aux=fila->inicio;
 		
-		while (aux!==NULL){
+		while (aux!=NULL){
 			printf("\nNome: %s",aux->nome);
 			printf("\nNome: %d",aux->numero);
 			printf("\nMarca: %s",aux->marca);
@@ -106,5 +106,80 @@ void imprime (Fila *fila){
 			aux=aux->proximo;
 		}
 	}
+}
+void numero_espera(Fila *fila){
+	
+	int contador=0;
+	Nodo *cont=fila->inicio;
+	
+	if(fila->inicio==NULL){
+		printf("A fila de avioes esta vazia!\n\n");
+	}
+	
+	else{
+		
+		while(cont!=NULL){
+			contador++;
+			cont=cont->proximo;
+		}
+		printf("\nExistem %d avioes na Fila de Espera\n",contador);
+	}
+}
+
+main(){
+	Fila *fila=criafila();
+	Fila *fila2=criafila();
+	
+	int x;
+	
+		do{
+			printf("--------------------------------------Menu--------------------------------------\n\n");
+			printf("----------Decolagens----------\n\n");
+			printf("   ---Selecione uma opcao---\n\n");
+			printf("1 - Adciona aviao a lista de espera.\n");
+			printf("2 - Mostrar todos os avioes da fila de espera.\n");
+			printf("3 - Informar o numero de avioes na lista de espera.\n\n");
+			printf("-----------Chegadas-----------\n\n");
+			printf("   ---Selecione uma opcao---\n\n");
+			printf("4 - Adciona aviao a lista de espera.\n");
+			printf("5 - Mostrar todos os avioes da fila de espera.\n");
+			printf("6 - Informar o numero de avioes na lista de espera.\n\n");
+			printf("0 - para sair do programa.\n\n");
+			scanf("%d",&x);
+			switch(x){
+				
+				case 1:
+					adiciona_fila(fila);
+					system("pause   ");
+					printf("\n\n");
+					break;
+				case 2:
+					imprime(fila);
+					system("pause   ");
+					printf("\n\n");
+					break;
+				case 3:
+					numero_espera(fila);
+					system("pause   ");
+					printf("\n\n");
+					break;
+				case 4:
+					adiciona_fila(fila2);
+					system("pause   ");
+					printf("\n\n");
+					break;
+				case 5:
+					imprime(fila2);
+					system("pause   ");
+					printf("\n\n");
+					break;
+				case 6:
+					numero_espera(fila2);
+					system("pause   ");
+					printf("\n\n");
+					break;
+			}
+			
+		}while(x!=0);
 }
 
