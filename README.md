@@ -1,4 +1,4 @@
-RepositÃ³rio criado no intuito do desenvolvimento do projeto de controle de trÃ¡fego aÃ©reo da disciplina de GerÃªncia de configuraÃ§Ã£o e mudanÃ§as 
+Repositório criado no intuito do desenvolvimento do projeto de controle de tráfego aéreo da disciplina de Gerência de çonfiguração e Mudanças.
 
 1 - O projeto foi desenvolvido na linguagem de programação c.
 2 - Todo o desenvolvimento e testes do programa foram feitos na IDE dev-c++.
