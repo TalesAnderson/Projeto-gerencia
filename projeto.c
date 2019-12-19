@@ -91,7 +91,7 @@ void adiciona_fila(Fila *fila){
 }
 void imprime (Fila *fila){
 	if (fila->inicio==NULL){
-		printf("A fila de avioes está vazia!\n\n");
+		printf("A fila de avioes esta vazia!\n\n");
 	}
 	else{
 		Nodo *aux=fila->inicio;
