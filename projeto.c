@@ -128,7 +128,19 @@ void numero_espera(Fila *fila){
 		printf("\nExistem %d avioes na Fila de Espera\n",contador);
 	}
 }
-
+void autorizar_primeiro(Fila *fila){
+	
+	if(fila->inicio==NULL){
+		printf("A fila de avioes esta vazia!\n\n");
+	}
+	
+	else{
+		Nodo *aux=fila->inicio;
+		Nodo *p=aux->proximo;
+		fila->inicio=p;
+		free(aux);
+	}
+}
 main(){
 	Fila *fila=criafila();
 	Fila *fila2=criafila();
