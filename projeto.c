@@ -145,6 +145,7 @@ main(){
 	Fila *fila=criafila();
 	Fila *fila2=criafila();
 	Fila *fila3=criafila();
+	Fila *fila4=criafila();
 
 	int x,p;
 
@@ -152,16 +153,23 @@ main(){
 			printf("--------------------------------------Menu--------------------------------------\n\n");
 			printf("----------Decolagens----------\n\n");
 			printf("   ---Selecione uma opcao---\n\n");
-			printf("1 - Adciona aviao a lista de espera.\n");
+			printf("1 - Adiciona aviao a lista de espera.\n");
 			printf("2 - Mostrar todos os avioes da fila de espera.\n");
-			printf("3 - Informar o numero de avioes na lista de espera.\n");
-			printf("4 - Informar o numero de avioes na lista de espera de prioridade.\n\n");
+			printf("3 - Mostrar todos os avioes da fila de prioridade.\n");
+			printf("4 - Informar o numero de avioes na lista de espera.\n");
+			printf("5 - Informar o numero de avioes na lista de prioridade.\n");
+			printf("6 - Autorizar a decolagem da lista de prioridade.\n");
+			printf("7 - Autorizar a decolagem na lista de espera.\n\n");
 			printf("-----------Chegadas-----------\n\n");
 			printf("   ---Selecione uma opcao---\n\n");
-			printf("5 - Adciona aviao a lista de espera.\n");
-			printf("6 - Mostrar todos os avioes da fila de espera.\n");
-			printf("7 - Informar o numero de avioes na lista de espera.\n");
-			printf("8 - Informar o numero de avioes na lista de espera de prioridade.\n\n");
+			printf("8 - Adiciona aviao a lista de espera.\n");
+			printf("9 - Mostrar todos os avioes da fila de espera.\n");
+			printf("10 - Mostrar todos os avioes da fila de prioridade.\n");
+			printf("11 - Informar o numero de avioes na lista de espera.\n");
+			printf("12 - Informar o numero de avioes na lista de prioridade.\n");
+			printf("13 - Autorizar o pouso da lista de prioridade.\n");
+			printf("14- Autorizar o pouso na lista de espera.\n\n");
+			
 			printf("9 - para sair do programa.\n\n");
 			scanf("%d",&x);
 			switch(x){
@@ -189,20 +197,35 @@ main(){
 					printf("\n\n");
 					break;
 				case 3:
+					imprime(fila3);
+					system("pause   ");
+					printf("\n\n");
+					break;
+				case 4:
 					numero_espera(fila);
 					system("pause   ");
 					printf("\n\n");
 					break;
-                case 4:
-                numero_espera(fila3);
-                system("pause   ");
-                printf("\n\n");
-                break;
-				case 5:
+                case 5:
+               		 numero_espera(fila3);
+                	 system("pause   ");
+                	 printf("\n\n");
+               		 break;
+                case 6:
+                	 autorizar_primeiro(fila3);
+                	 system("pause   ");
+                	 printf("\n\n");
+                	 break;
+                case 7:
+               		 autorizar_primeiro(fila);
+                	 system("pause   ");
+                	 printf("\n\n");
+                	 break;
+				case 8:
 				    while(x!=0){
                     p=adiciona_prioridade();
 				    if(p==true){
-                    adiciona_fila(fila3);
+                    adiciona_fila(fila4);
 					system("pause   ");
 					printf("\n\n");
                     }
@@ -215,23 +238,39 @@ main(){
                     scanf("%d", &x);
 				    }
 					break;
-				case 6:
+				case 9:
 					imprime(fila2);
 					system("pause   ");
 					printf("\n\n");
 					break;
-				case 7:
+				case 10:
+					imprime(fila4);
+					system("pause   ");
+					printf("\n\n");
+					break;
+				case 11:
 					numero_espera(fila2);
 					system("pause   ");
 					printf("\n\n");
 					break;
-                case 8:
-					numero_espera(fila3);
+                case 12:
+					numero_espera(fila4);
 					system("pause   ");
 					printf("\n\n");
 					break;
+				case 13:
+                	 autorizar_primeiro(fila4);
+                	 system("pause   ");
+                	 printf("\n\n");
+                	 break;
+                case 14:
+               		 autorizar_primeiro(fila2);
+                	 system("pause   ");
+                	 printf("\n\n");
+                	 break;
+					
 			}
 
-		}while(x!=9);
+		}while(x!=15);
 }
 
